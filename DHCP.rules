@@ -1,0 +1,1 @@
+alert ip any any -> any any (msg:"DHCP Spoofing Attempt"; content:"|63 82 53 63|"; offset:240; depth:4; content:"|35 01 05|"; within:10; classtype:attempted-recon; sid:1000001; rev:1;)
